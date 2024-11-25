@@ -5,6 +5,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import BaseLayout from './components/layout/BaseLayout';
 import LoginPage from './features/auth/LoginPage';
 import ProtectedRoute from './components/common/ProtectedRoute';
+import DashboardPage from "./features/dashboard/DashBoardPage";
 
 const queryClient = new QueryClient();
 
@@ -24,9 +25,9 @@ function App() {
                                 <ProtectedRoute>
                                     <BaseLayout>
                                         <Routes>
-                                            <Route path="/" element={<div>Dashboard Coming Soon!</div>} />
-                                            <Route path="/users" element={<div>Users Coming Soon!</div>} />
-                                            <Route path="/settings" element={<div>Settings Coming Soon!</div>} />
+                                            <Route path="/" element={<DashboardPage />} />
+                                            <Route path="/users" element={<div>Users Page Coming Soon</div>} />
+                                            <Route path="/settings" element={<div>Settings Page Coming Soon</div>} />
                                         </Routes>
                                     </BaseLayout>
                                 </ProtectedRoute>
